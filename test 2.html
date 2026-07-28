@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề Kiểm Tra Tiếng Anh Học Kỳ 1 - Lớp 7 | Ms Lê Hằng English</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* === RESET & SYSTEM SETUP === */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #2d3436;
+            padding: 20px 10px 60px 10px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* === FLOATING SVG BACKGROUND PATTERN === */
+        .bg-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-pattern-item {
+            position: absolute;
+            opacity: 0.25;
+            animation: floatAnim 12s infinite ease-in-out;
+        }
+
+        @keyframes floatAnim {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(15deg); }
+        }
+
+        /* === MAIN CONTAINER CARD === */
+        .app-container {
+            max-width: 860px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Styling */
+        .header-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 20px 25px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            border: 4px solid #FFF;
+        }
+
+        .creator-tag {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: #8854C0;
+            background: #F3E5F5;
+            padding: 4px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .main-title {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #2d3436;
+            margin-bottom: 6px;
+        }
+
+        .sub-info {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #636e72;
+        }
+
+        /* Important Notice Box */
+        .notice-box {
+            background: #FFEAA7;
+            border: 3px dashed #FDCB6E;
+            border-radius: 20px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(253, 203, 110, 0.4);
+            animation: pulseNotice 2s infinite alternate;
+        }
+
+        @keyframes pulseNotice {
+            0% { transform: scale(0.99); }
+            100% { transform: scale(1.01); }
+        }
+
+        .notice-title {
+            color: #D63031;
+            font-weight: 900;
+            font-size: 1.05rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .notice-content {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .notice-highlight {
+            color: #E17055;
+            font-weight: 900;
+            display: block;
+            margin-top: 6px;
+            text-transform: uppercase;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .progress-bar-bg {
+            flex-grow: 1;
+            height: 16px;
+            background: #dfe6e9;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #b2bec3;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00C9A7, #00D26A);
+            border-radius: 8px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-text {
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #00b894;
+            min-width: 80px;
+            text-align: right;
+        }
+
+        /* Question Section / Cards */
+        .section-header {
+            background: #8854C0;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 16px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin: 25px 0 15px 0;
+            box-shadow: 0 6px 0 #5e35b1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reading-passage-box {
+            background: #FFFFFF;
+            border: 3px solid #74b9ff;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #2d3436;
+            box-shadow: 0 8px 20px rgba(116, 185, 255, 0.2);
+        }
+
+        .reading-passage-box h4 {
+            color: #0984e3;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .question-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 3px solid #f1f2f6;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .question-card:hover {
+            border-color: #a29bfe;
+        }
+
+        .question-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #2d3436;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .phonetics-target {
+            color: #d63031;
+            text-decoration: underline;
+            font-weight: 900;
+        }
+
+        /* Options Grid */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        @media (min-width: 600px) {
+            .options-grid.two-cols {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .option-btn {
+            background: #F8F9FA;
+            border: 2px solid #E9ECEF;
+            border-radius: 18px;
+            padding: 12px 18px;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #495057;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 0 #CED4DA;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            outline: none;
+            position: relative;
+        }
+
+        .option-btn:hover:not(.disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 0 #ADB5BD;
+            background: #FFF;
+            border-color: #a29bfe;
+        }
+
+        .option-btn:active:not(.disabled) {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #ADB5BD;
+        }
+
+        /* Correct & Incorrect States */
+        .option-btn.correct {
+            background: #00D26A !important;
+            color: white !important;
+            border-color: #00B853 !important;
+            box-shadow: 0 5px 0 #00893C !important;
+        }
+
+        .option-btn.incorrect {
+            background: #FF4757 !important;
+            color: white !important;
+            border-color: #FF2E43 !important;
+            box-shadow: 0 5px 0 #C40015 !important;
+            animation: shake 0.4s ease;
+        }
+
+        .option-btn.disabled {
+            cursor: default;
+            opacity: 0.85;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
+
+        .option-icon {
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        /* Explanation Box */
+        .explanation-box {
+            display: none;
+            margin-top: 18px;
+            background: #F0F9FF;
+            border: 2.5px solid #00A8FF;
+            border-radius: 18px;
+            padding: 16px 20px;
+            animation: slideDown 0.35s ease forwards;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .exp-header {
+            font-weight: 800;
+            color: #0097E6;
+            font-size: 1.02rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .exp-step {
+            margin-bottom: 8px;
+        }
+
+        .exp-step-title {
+            font-weight: 800;
+            color: #2980b9;
+        }
+
+        .exp-list {
+            margin-left: 20px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+
+        .exp-list li {
+            margin-bottom: 3px;
+        }
+
+        /* Custom Visual Signs for Q29 & Q30 */
+        .custom-sign-card {
+            border: 3px solid #2d3436;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px auto;
+            max-width: 380px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .exit-notice-box {
+            background: #d63031;
+            color: white;
+            font-weight: 900;
+            border-radius: 12px;
+            padding: 15px;
+            border: 4px solid #FFF;
+            outline: 3px solid #d63031;
+        }
+
+        .exit-notice-box i {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .phone-sign-box {
+            background: #f1f2f6;
+            border-radius: 12px;
+            padding: 15px;
+            position: relative;
+        }
+
+        .phone-icon-wrap {
+            position: relative;
+            display: inline-block;
+            font-size: 3rem;
+            color: #2d3436;
+        }
+
+        .phone-icon-wrap .fa-ban {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            font-size: 3.5rem;
+            color: #ff4757;
+        }
+
+        /* Submit Button Container */
+        .submit-container {
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 40px;
+        }
+
+        .btn-submit-test {
+            background: linear-gradient(135deg, #00C9A7, #00D26A);
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 0 #00893C, 0 15px 25px rgba(0, 210, 106, 0.4);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-submit-test:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 0 #00893C, 0 20px 30px rgba(0, 210, 106, 0.5);
+        }
+
+        .btn-submit-test:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #00893C;
+        }
+
+        /* Result Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 30px;
+            max-width: 550px;
+            width: 100%;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 5px solid #FFD700;
+            animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes modalPop {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-avatar {
+            width: 90px;
+            height: 90px;
+            background: #8854C0;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 15px auto;
+            box-shadow: 0 8px 20px rgba(136, 84, 192, 0.4);
+            border: 4px solid #FFF;
+        }
+
+        .modal-score-big {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #00D26A;
+            margin: 10px 0;
+        }
+
+        .modal-feedback {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.6;
+            margin: 15px 0 25px 0;
+            background: #F8F9FA;
+            padding: 15px;
+            border-radius: 16px;
+            border-left: 5px solid #8854C0;
+        }
+
+        .btn-modal-close {
+            background: #8854C0;
+            color: white;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 0 #5e35b1;
+        }
+
+        .btn-modal-close:hover {
+            background: #7b4397;
+        }
+
+        /* Canvas Confetti */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas for Confetti Effect -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Floating Background SVGs -->
+    <div class="bg-patterns">
+        <svg class="bg-pattern-item" style="top: 10%; left: 5%; width: 40px;" viewBox="0 0 24 24" fill="#FDCB6E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="bg-pattern-item" style="top: 25%; right: 8%; width: 50px; animation-delay: 2s;" viewBox="0 0 24 24" fill="#FF7675"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg class="bg-pattern-item" style="top: 60%; left: 8%; width: 45px; animation-delay: 4s;" viewBox="0 0 24 24" fill="#00C9A7"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+        <svg class="bg-pattern-item" style="top: 80%; right: 10%; width: 40px; animation-delay: 1s;" viewBox="0 0 24 24" fill="#8854C0"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+    </div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Header -->
+        <div class="header-card">
+            <span class="creator-tag"><i class="fa-solid fa-graduation-cap"></i> Giáo viên tạo: Ms Lê Hằng English</span>
+            <h1 class="main-title">ĐỀ KIỂM TRA HỌC KÌ I – LỚP 7</h1>
+            <div class="sub-info">Môn: Tiếng Anh | Năm học: 2024-2025 | Form chuẩn 2025 (Đề 03)</div>
+        </div>
+
+        <!-- Important Notice Box -->
+        <div class="notice-box">
+            <div class="notice-title">⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</div>
+            <div class="notice-content">
+                Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.
+                <br>Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!
+                <span class="notice-highlight">* Kéo tới đâu, làm tới đó! *</span>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <i class="fa-solid fa-trophy" style="color: #FDCB6E; font-size: 1.4rem;"></i>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0 / 40 câu</div>
+        </div>
+
+        <!-- Questions Container (Populated via JavaScript) -->
+        <div id="questions-wrapper"></div>
+
+        <!-- Submit Button -->
+        <div class="submit-container">
+            <button class="btn-submit-test" id="btn-submit" onclick="evaluateFinalScore()">
+                <i class="fa-solid fa-paper-plane"></i> NỘP BÀI THI & XEM KẾT QUẢ
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Result Popup Modal -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-card">
+            <div class="modal-avatar">
+                <i class="fa-solid fa-user-nurse"></i>
+            </div>
+            <h2>KẾT QUẢ BÀI THI</h2>
+            <div class="modal-score-big" id="modal-score">0 / 40</div>
+            <p id="modal-percentage" style="font-weight: 800; color: #636e72; font-size: 1.1rem;"></p>
+            <div class="modal-feedback" id="modal-feedback-text">
+                <!-- Advice injected here -->
+            </div>
+            <button class="btn-modal-close" onclick="closeModal()">Đóng & Xem lại bài làm</button>
+        </div>
+    </div>
+
+    <!-- Audio Synthesizer & Main Script -->
+    <script>
+        /* === WEB AUDIO API FOR GAMIFICATION SOUNDS === */
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new AudioContext();
+            }
+        }
+
+        function playDingSound() {
+            try {
+                initAudio();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                osc.frequency.exponentialRampToValueAtTime(1046.50, audioCtx.currentTime + 0.25); // C6
+                gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.3);
+            } catch (e) { console.log(e); }
+        }
+
+        function playWrongSound() {
+            try {
+                initAudio();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+                osc.frequency.setValueAtTime(160, audioCtx.currentTime + 0.15); // Dis3
+                gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } catch (e) { console.log(e); }
+        }
+
+        /* === CONFETTI ENGINE === */
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#8854C0', '#FDCB6E', '#00C9A7', '#FF7675', '#00D26A'];
+
+            for (let i = 0; i < 70; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 16,
+                    vy: (Math.random() - 0.8) * 16,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 100
+                });
+            }
+
+            function render() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+                particles.forEach(p => {
+                    if (p.life > 0) {
+                        alive = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.4; // gravity
+                        p.life -= 2;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+                if (alive) requestAnimationFrame(render);
+            }
+            render();
+        }
+
+        /* === ALL 40 QUESTIONS DATA WITH ULTRA-DETAILED EXPLANATIONS === */
+        const questionsData = [
+            // PHONETICS (1-2)
+            {
+                id: 1,
+                section: "PRONUNCIATION (Phát âm)",
+                question: "Mark the letter A, B, C or D to indicate the word whose underlined part differs from the other three in pronunciation.",
+                options: [
+                    { key: "A", text: "c<u>o</u>ntrol", val: "A" },
+                    { key: "B", text: "b<u>o</u>ttle", val: "B" },
+                    { key: "C", text: "v<u>o</u>lunteer", val: "C" },
+                    { key: "D", text: "c<u>o</u>ncentrate", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích phiên âm phần gạch chân:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. c<u>o</u>ntrol</b> /kənˈtrəʊl/: Phần "o" được phát âm là <b>/əʊ/</b>.</li>
+                        <li><b>B. b<u>o</u>ttle</b> /ˈbɒtl/: Phần "o" được phát âm là <b>/ɒ/</b>.</li>
+                        <li><b>C. v<u>o</u>lunteer</b> /ˌvɒlənˈtɪə/: Phần "o" được phát âm là <b>/ɒ/</b>.</li>
+                        <li><b>D. c<u>o</u>ncentrate</b> /ˈkɒnsntreɪt/: Phần "o" được phát âm là <b>/ɒ/</b>.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa từ vựng:</span> A. kiểm soát; B. cái chai; C. tình nguyện viên; D. tập trung.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Đáp án A phát âm nguyên âm /əʊ/, khác hẳn 3 đáp án còn lại phát âm nguyên âm /ɒ/.</div>
+                `
+            },
+            {
+                id: 2,
+                section: "PRONUNCIATION (Phát âm)",
+                question: "Mark the letter A, B, C or D to indicate the word whose underlined part differs from the other three in pronunciation.",
+                options: [
+                    { key: "A", text: "mea<u>s</u>ure", val: "A" },
+                    { key: "B", text: "plea<u>s</u>ure", val: "B" },
+                    { key: "C", text: "u<u>s</u>ual", val: "C" },
+                    { key: "D", text: "su<u>g</u>ar", val: "D" }
+                ],
+                correct: "D",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích phiên âm phần gạch chân:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. mea<u>s</u>ure</b> /ˈmeʒə/: Chữ "s" phát âm là âm <b>/ʒ/</b>.</li>
+                        <li><b>B. plea<u>s</u>ure</b> /ˈpleʒə/: Chữ "s" phát âm là âm <b>/ʒ/</b>.</li>
+                        <li><b>C. u<u>s</u>ual</b> /ˈjuːʒuəl/: Chữ "s" phát âm là âm <b>/ʒ/</b>.</li>
+                        <li><b>D. su<u>g</u>ar</b> /ˈʃʊɡə/: Chữ "s" phát âm là âm <b>/ʃ/</b> (âm "sê" uốn lưỡi).</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa từ vựng:</span> A. đo lường; B. niềm hân hạnh; C. thông thường; D. đường ăn.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Đáp án D phát âm là /ʃ/, còn A, B, C đều phát âm là /ʒ/.</div>
+                `
+            },
+            // STRESS (3-4)
+            {
+                id: 3,
+                section: "STRESS (Trọng âm)",
+                question: "Mark the letter A, B, C or D to indicate the word that differs from the other three in the position of primary stress.",
+                options: [
+                    { key: "A", text: "village", val: "A" },
+                    { key: "B", text: "summer", val: "B" },
+                    { key: "C", text: "hotel", val: "C" },
+                    { key: "D", text: "winter", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích vị trí trọng âm:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. village</b> /ˈvɪlɪdʒ/: Trọng âm rơi vào âm tiết thứ <b>NHẤT</b>.</li>
+                        <li><b>B. summer</b> /ˈsʌmə/: Trọng âm rơi vào âm tiết thứ <b>NHẤT</b>.</li>
+                        <li><b>C. hotel</b> /həʊˈtel/: Trọng âm rơi vào âm tiết thứ <b>HAI</b>.</li>
+                        <li><b>D. winter</b> /ˈwɪntə/: Trọng âm rơi vào âm tiết thứ <b>NHẤT</b>.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> A. ngôi làng; B. mùa hè; C. khách sạn; D. mùa đông.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Đáp án C có trọng âm nhấn vào âm tiết 2, khác với A, B, D nhấn vào âm tiết 1.</div>
+                `
+            },
+            {
+                id: 4,
+                section: "STRESS (Trọng âm)",
+                question: "Mark the letter A, B, C or D to indicate the word that differs from the other three in the position of primary stress.",
+                options: [
+                    { key: "A", text: "answer", val: "A" },
+                    { key: "B", text: "repeat", val: "B" },
+                    { key: "C", text: "repair", val: "C" },
+                    { key: "D", text: "attract", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích vị trí trọng âm:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. answer</b> /ˈɑːnsə/: Trọng âm rơi vào âm tiết thứ <b>NHẤT</b>.</li>
+                        <li><b>B. repeat</b> /rɪˈpiːt/: Trọng âm rơi vào âm tiết thứ <b>HAI</b>.</li>
+                        <li><b>C. repair</b> /rɪˈpeə/: Trọng âm rơi vào âm tiết thứ <b>HAI</b>.</li>
+                        <li><b>D. attract</b> /əˈtrækt/: Trọng âm rơi vào âm tiết thứ <b>HAI</b>.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">2. Quy tắc & Nghĩa:</span> 'answer' (trả lời) là động từ đặc biệt 2 âm tiết có trọng âm ở âm 1; 'repeat' (nhắc lại), 'repair' (sửa chữa), 'attract' (thu hút) mang trọng âm ở âm 2.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Chọn A.</div>
+                `
+            },
+            // MULTIPLE CHOICE (5-12)
+            {
+                id: 5,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "There is ______ bread and milk in the fridge, but there isn't ______ orange juice, I think.",
+                options: [
+                    { key: "A", text: "some – some", val: "A" },
+                    { key: "B", text: "some – any", val: "B" },
+                    { key: "C", text: "a – an", val: "C" },
+                    { key: "D", text: "some – an", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Có một ít bánh mì và sữa trong tủ lạnh, nhưng tôi nghĩ không còn chút nước cam nào."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích ngữ pháp:</span></div>
+                    <ul class="exp-list">
+                        <li>Vế 1 là câu khẳng định ("There is..."): Dùng <b>some</b> trước danh từ không đếm được (bread, milk).</li>
+                        <li>Vế 2 là câu phủ định ("there isn't..."): Dùng <b>any</b> trong câu phủ định.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Loại trừ:</span> A sai vì vế 2 dùng 'some' trong phủ định; C & D sai vì bread/milk/orange juice không đếm được nên không dùng mạo từ a/an.</div>
+                `
+            },
+            {
+                id: 6,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "Volunteers were so happy because they _______ love to those small villages.",
+                options: [
+                    { key: "A", text: "bring", val: "A" },
+                    { key: "B", text: "bringed", val: "B" },
+                    { key: "C", text: "brought", val: "C" },
+                    { key: "D", text: "are bringing", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Các tình nguyện viên đã rất hạnh phúc bởi vì họ đã mang tình yêu thương đến những ngôi làng nhỏ đó."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Ngữ pháp Thì Quá khứ đơn:</span> Mệnh đề đầu dùng "were" (thì quá khứ đơn), nên vế sau biểu thị hành động đã xảy ra trong quá khứ -> Dùng cột 2 bất quy tắc của "bring" là <b>brought</b>.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Phân tích các đáp án:</span></div>
+                    <ul class="exp-list">
+                        <li>A. bring (v): Hiện tại đơn -> Sai thì.</li>
+                        <li>B. bringed: Từ không tồn tại (bring là động từ bất quy tắc: bring - brought - brought).</li>
+                        <li>C. brought: Quá khứ đơn của bring -> ĐÚNG.</li>
+                        <li>D. are bringing: Hiện tại tiếp diễn -> Sai thì.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 7,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "People say that I am _____ my grandmother.",
+                options: [
+                    { key: "A", text: "too", val: "A" },
+                    { key: "B", text: "same", val: "B" },
+                    { key: "C", text: "from", val: "C" },
+                    { key: "D", text: "like", val: "D" }
+                ],
+                correct: "D",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Mọi người nói rằng tôi giống như bà ngoại/bà nội của tôi."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích 4 đáp án:</span></div>
+                    <ul class="exp-list">
+                        <li>A. too (adv): quá / cũng.</li>
+                        <li>B. same (adj): giống nhau (Phải đi với cấu trúc 'the same as').</li>
+                        <li>C. from (prep): đến từ (khác nhau dùng 'different from').</li>
+                        <li>D. like (prep): giống như. Cấu trúc: <b>be + like + N</b> (giống như ai/cái gì).</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Do có 'am' (to be) đằng trước nên dùng 'like' để tạo thành mệnh đề so sánh giống nhau.</div>
+                `
+            },
+            {
+                id: 8,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "My father loved ______ horse-riding when he lived in France.",
+                options: [
+                    { key: "A", text: "doing", val: "A" },
+                    { key: "B", text: "going", val: "B" },
+                    { key: "C", text: "playing", val: "C" },
+                    { key: "D", text: "taking", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Bố tôi rất thích đi cưỡi ngựa khi ông ấy còn sống ở Pháp."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Cụm từ cố định (Collocation):</span></div>
+                    <ul class="exp-list">
+                        <li>Cụm từ đi cưỡi ngựa là: <b>go horse-riding</b>. Sau 'loved' động từ thêm -ing -> <b>going horse-riding</b>.</li>
+                        <li>A. do: đi với môn võ/thể dục (do judo, do gymnastics).</li>
+                        <li>C. play: đi với môn đồng đội/bóng (play football, play tennis).</li>
+                        <li>D. take: không đi trực tiếp với horse-riding theo nghĩa sở thích này.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 9,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "Ann is asking to buy a sandwich.\nAnna: _________________. \nTom: It's 20,000 dong.",
+                options: [
+                    { key: "A", text: "How much is a sandwich?", val: "A" },
+                    { key: "B", text: "How many sandwiches are there?", val: "B" },
+                    { key: "C", text: "Can you tell me what this is?", val: "C" },
+                    { key: "D", text: "Please buy this sandwich for me", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích câu trả lời của Tom:</span> "It's 20,000 dong." (Nó có giá 20.000 đồng.) -> Câu trả lời về giá tiền.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích 4 đáp án:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. How much is a sandwich?</b>: Bánh mì sandwich này giá bao nhiêu? -> Đúng cấu trúc hỏi giá tiền (How much is/are + N?).</li>
+                        <li>B. How many sandwiches are there?: Có bao nhiêu cái bánh mì? (Hỏi số lượng).</li>
+                        <li>C. Can you tell me what this is?: Bạn có thể nói cho tôi đây là cái gì không?</li>
+                        <li>D. Please buy this sandwich for me: Làm ơn mua giúp tôi cái bánh mì này.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 10,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "Viet Duc High School in Ha Noi is one of the oldest schools in Viet Nam. They _____ it in 1897.",
+                options: [
+                    { key: "A", text: "built", val: "A" },
+                    { key: "B", text: "got", val: "B" },
+                    { key: "C", text: "made", val: "C" },
+                    { key: "D", text: "did", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Trường THPT Việt Đức ở Hà Nội là một trong những ngôi trường lâu đời nhất Việt Nam. Người ta đã xây dựng trường vào năm 1897."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích từ vựng động từ:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. built</b> (v): xây dựng (nhà cửa, trường học).</li>
+                        <li>B. got (v): lấy, nhận.</li>
+                        <li>C. made (v): làm ra, chế tạo (đồ vật nhỏ).</li>
+                        <li>D. did (v): làm (bài tập, công việc).</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Đi với công trình kiến trúc trường học "school", ta dùng động từ "build" (dạng quá khứ là built).</div>
+                `
+            },
+            {
+                id: 11,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "Vegetables are one of the most important parts of my diet, and my favourite one is __________.",
+                options: [
+                    { key: "A", text: "pork", val: "A" },
+                    { key: "B", text: "beef", val: "B" },
+                    { key: "C", text: "spinach", val: "C" },
+                    { key: "D", text: "tuna", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Rau củ là một trong những phần quan trọng nhất trong chế độ ăn của tôi, và loại rau yêu thích của tôi là rau chân vịt (rau bó xôi)."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân loại từ vựng theo chủ đề:</span></div>
+                    <ul class="exp-list">
+                        <li>A. pork (n): thịt lợn (loại thịt).</li>
+                        <li>B. beef (n): thịt bò (loại thịt).</li>
+                        <li><b>C. spinach</b> (n): rau chân vịt / rau cải bina (loại RAU - Vegetable).</li>
+                        <li>D. tuna (n): cá thu / cá tuna (loại cá).</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Chỉ có C là tên một loại rau (Vegetables).</div>
+                `
+            },
+            {
+                id: 12,
+                section: "MULTIPLE CHOICE (Trắc nghiệm tổng hợp)",
+                question: "He bought ______ books and then left for home.",
+                options: [
+                    { key: "A", text: "much more", val: "A" },
+                    { key: "B", text: "a few", val: "B" },
+                    { key: "C", text: "a lot", val: "C" },
+                    { key: "D", text: "a little", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa toàn câu:</span> "Anh ấy đã mua một vài cuốn sách và sau đó rời đi về nhà."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Ngữ pháp Lượng từ (Quantifiers):</span></div>
+                    <ul class="exp-list">
+                        <li>'books' là danh từ đếm được số nhiều (có -s).</li>
+                        <li><b>A. much more:</b> 'much' đi với danh từ không đếm được -> Sai.</li>
+                        <li><b>B. a few:</b> một vài (đi với danh từ đếm được số nhiều) -> <b>ĐÚNG</b>.</li>
+                        <li><b>C. a lot:</b> phải đi với 'of' mới đứng trước danh từ (a lot of books) -> Sai.</li>
+                        <li><b>D. a little:</b> một ít (đi với danh từ không đếm được) -> Sai.</li>
+                    </ul>
+                `
+            },
+            // ANNOUNCEMENT 1 (13-16)
+            {
+                id: 13,
+                section: "READING ANNOUNCEMENT 1 (5 Tips for Healthy Eating)",
+                passage: "<b>5 Tips for Healthy Eating</b><br>1. Eat (13) ____ variety of Fresh Foods: Include plenty of fruits, vegetables, and proteins.<br>2. Drink (14) ____ Water: Stay hydrated throughout a day.<br>3. Limit Processed Foods: Avoid too much fast food and (15) ____ snacks.<br>4. Watch Your Portions: Serve the right amount for your needs.<br>5. Plan Meals (16) ____ Advance: Prepare healthy options for busy days.",
+                question: "Choose the best option for blank (13):",
+                options: [
+                    { key: "A", text: "a", val: "A" },
+                    { key: "B", text: "an", val: "B" },
+                    { key: "C", text: "the", val: "C" },
+                    { key: "D", text: "x (không điền)", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cấu trúc từ vựng:</span> Cụm từ cố định <b>"a variety of + N"</b> có nghĩa là "đa dạng / nhiều loại cái gì đó".</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> "Ăn đa dạng các thực phẩm tươi sống..."</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Phân tích:</span> Vì 'variety' bắt đầu bằng phụ âm /v/ nên ta dùng mạo từ <b>a</b>.</div>
+                `
+            },
+            {
+                id: 14,
+                section: "READING ANNOUNCEMENT 1 (5 Tips for Healthy Eating)",
+                question: "Choose the best option for blank (14):",
+                options: [
+                    { key: "A", text: "less", val: "A" },
+                    { key: "B", text: "enough", val: "B" },
+                    { key: "C", text: "many", val: "C" },
+                    { key: "D", text: "a few", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa ngữ cảnh:</span> "Uống (14) _____ nước: Giữ cơ thể đủ nước suốt cả ngày."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích đáp án:</span></div>
+                    <ul class="exp-list">
+                        <li>A. less: ít hơn (Uống ít nước hơn -> Sai lời khuyên sức khỏe).</li>
+                        <li><b>B. enough:</b> đủ (Drink enough water = Uống đủ nước -> Rất hợp lý).</li>
+                        <li>C. many: nhiều (Chỉ đi với danh từ đếm được, 'water' là không đếm được -> Sai).</li>
+                        <li>D. a few: một vài (Chỉ đi với danh từ đếm được -> Sai).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 15,
+                section: "READING ANNOUNCEMENT 1 (5 Tips for Healthy Eating)",
+                question: "Choose the best option for blank (15):",
+                options: [
+                    { key: "A", text: "sugar", val: "A" },
+                    { key: "B", text: "sugars", val: "B" },
+                    { key: "C", text: "sugary", val: "C" },
+                    { key: "D", text: "sugariness", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Từ loại (Word Form):</span> Đứng trước danh từ 'snacks' (đồ ăn vặt) ta cần một <b>TÍNH TỪ</b> để bổ nghĩa cho danh từ đó.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích các từ loại:</span></div>
+                    <ul class="exp-list">
+                        <li>A. sugar (n): đường.</li>
+                        <li>B. sugars (n số nhiều): các loại đường.</li>
+                        <li><b>C. sugary (adj):</b> chứa nhiều đường, ngọt ngào -> TÍNH TỪ.</li>
+                        <li>D. sugariness (n): sự ngọt sắc.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Dịch nghĩa:</span> "Tránh quá nhiều thức ăn nhanh và các món ăn vặt chứa nhiều đường (sugary snacks)."</div>
+                `
+            },
+            {
+                id: 16,
+                section: "READING ANNOUNCEMENT 1 (5 Tips for Healthy Eating)",
+                question: "Choose the best option for blank (16):",
+                options: [
+                    { key: "A", text: "in", val: "A" },
+                    { key: "B", text: "at", val: "B" },
+                    { key: "C", text: "on", val: "C" },
+                    { key: "D", text: "from", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cụm giới từ cố định:</span> <b>in advance</b> có nghĩa là "trước, làm trước".</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> "Plan Meals in Advance" = Lên kế hoạch cho các bữa ăn trước.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Chọn A (in). Giới từ at, on, from không kết hợp với advance tạo thành cụm từ mang nghĩa này.</div>
+                `
+            },
+            // TEXT ORDER & LOGIC (17-18)
+            {
+                id: 17,
+                section: "TEXT REORDERING & LOGIC",
+                passage: "Scientists say giving time to help others benefits us.<br>a) Third, volunteers have opportunities to develop more relationships.<br>b) The first benefit of volunteering is that it helps us learn to be flexible.<br>c) Second, volunteering can improve our health because it requires us to be active.<br>d) Moreover, volunteers often help people in need, so they may feel thankful for what they have.",
+                question: "Put the sentences (a-d) in the correct order to make a logical text.",
+                options: [
+                    { key: "A", text: "b - a - c - d", val: "A" },
+                    { key: "B", text: "b - c - a - d", val: "B" },
+                    { key: "C", text: "d - b - c - a", val: "C" },
+                    { key: "D", text: "d - b - a - c", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích các từ nối thứ tự (Sequence Markers):</span></div>
+                    <ul class="exp-list">
+                        <li>Sentence b: "The <b>first</b> benefit..." (Lợi ích ĐẦU TIÊN là...).</li>
+                        <li>Sentence c: "<b>Second</b>, volunteering..." (THỨ HAI, làm tình nguyện...).</li>
+                        <li>Sentence a: "<b>Third</b>, volunteers..." (THỨ BA, tình nguyện viên...).</li>
+                        <li>Sentence d: "<b>Moreover</b>, volunteers..." (HƠN THẾ NỮA, tình nguyện viên...).</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">2. Trình tự logic:</span> First (Đầu tiên) -> Second (Thứ hai) -> Third (Thứ ba) -> Moreover (Hơn thế nữa).</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Thứ tự đúng:</span> b - c - a - d -> Chọn <b>B</b>.</div>
+                `
+            },
+            {
+                id: 18,
+                section: "TEXT REORDERING & LOGIC",
+                question: "Choose the sentence that can end the text (in Question 17) most appropriately.",
+                options: [
+                    { key: "A", text: "For these reasons, volunteers are generally beneficial.", val: "A" },
+                    { key: "B", text: "In addition, volunteers are generally positive.", val: "B" },
+                    { key: "C", text: "Additionally, volunteers are generally positive.", val: "C" },
+                    { key: "D", text: "Moreover, volunteers are generally positive.", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Phân tích chức năng câu kết đoạn (Concluding sentence):</span> Câu kết cần tổng kết lại các lý do đã nêu ở trên.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Cụm từ kết bài:</span> <b>"For these reasons..."</b> (Vì những lý do này...) là cụm từ kết bài tiêu chuẩn, mang ý nghĩa tóm lược.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Phân tích loại trừ:</span> B, C, D đều dùng từ nối bổ sung thông tin (In addition, Additionally, Moreover) không phù hợp làm câu kết luận cuối cùng.</div>
+                `
+            },
+            // CLOZE PASSAGE 2 (TEMPLE OF LITERATURE) (19-24)
+            {
+                id: 19,
+                section: "READING PASSAGE 2 (The Temple of Literature)",
+                passage: "The Temple of Literature was (19) ___________ in 1070 under Ly Thanh Tong’s dynasty. The temple is divided into five courtyards. The first courtyard stretches (20) ___________ the main gate to Dai Trung gate. The second stands out with Khue Van Cac Pavilion. The third courtyard is (21)___________ doctor names were listed on stone tablets above tortoise backs. There are a total of 82 tombstones, with names and places of birth of 1307 doctors. The fourth courtyard is dedicated to Confucius and his 72 honoured students, as (22) ___________ as Chu Van An – a famous teacher known for his devotion to teaching. The last and also furthest courtyard is Thai Hoc house, which used to be the Imperial Academy (QuocTuGiam) – the first (23)__________of Vietnam. Thai Hoc house holds a small (24) ___________ of old time costumes for students and mandarins.",
+                question: "Choose the correct option for blank (19):",
+                options: [
+                    { key: "A", text: "constructed", val: "A" },
+                    { key: "B", text: "build", val: "B" },
+                    { key: "C", text: "erected", val: "C" },
+                    { key: "D", text: "considered", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Ngữ pháp Câu bị động (Passive Voice):</span> "was + V3/ed" -> Cần động từ quá khứ phân tử.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Nghĩa của từ vựng:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. constructed:</b> được xây dựng (Xây dựng các công trình lịch sử lớn).</li>
+                        <li>B. build: dạng nguyên mẫu -> Sai ngữ pháp bị động.</li>
+                        <li>C. erected: dựng lên.</li>
+                        <li>D. considered: được coi là.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Dịch nghĩa:</span> "Văn Miếu được xây dựng vào năm 1070 dưới triều vua Lý Thánh Tông."</div>
+                `
+            },
+            {
+                id: 20,
+                section: "READING PASSAGE 2 (The Temple of Literature)",
+                question: "Choose the correct option for blank (20):",
+                options: [
+                    { key: "A", text: "since", val: "A" },
+                    { key: "B", text: "from", val: "B" },
+                    { key: "C", text: "in", val: "C" },
+                    { key: "D", text: "at", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cấu trúc khoảng cách/phạm vi:</span> <b>from... to...</b> (từ... đến...).</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> "...stretches <b>from</b> the main gate <b>to</b> Dai Trung gate" (...kéo dài từ cổng chính đến cổng Đại Trung).</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Đi kèm với "to" đằng sau để chỉ điểm bắt đầu và kết thúc là giới từ <b>from</b>.</div>
+                `
+            },
+            {
+                id: 21,
+                section: "READING PASSAGE 2 (The Temple of Literature)",
+                question: "Choose the correct option for blank (21):",
+                options: [
+                    { key: "A", text: "when", val: "A" },
+                    { key: "B", text: "who", val: "B" },
+                    { key: "C", text: "what", val: "C" },
+                    { key: "D", text: "where", val: "D" }
+                ],
+                correct: "D",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Trạng từ quan hệ (Relative Adverb):</span> 'The third courtyard' (Sân thứ ba) là từ chỉ <b>NƠI CHỐN</b>.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích từ quan hệ:</span></div>
+                    <ul class="exp-list">
+                        <li>A. when: chỉ thời gian.</li>
+                        <li>B. who: chỉ người.</li>
+                        <li>C. what: chỉ cái gì.</li>
+                        <li><b>D. where:</b> chỉ địa điểm, nơi chốn -> <b>ĐÚNG</b>.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Dịch nghĩa:</span> "Sân thứ ba là nơi mà tên các vị tiến sĩ được khắc trên bia đá..."</div>
+                `
+            },
+            {
+                id: 22,
+                section: "READING PASSAGE 2 (The Temple of Literature)",
+                question: "Choose the correct option for blank (22):",
+                options: [
+                    { key: "A", text: "long", val: "A" },
+                    { key: "B", text: "good", val: "B" },
+                    { key: "C", text: "well", val: "C" },
+                    { key: "D", text: "far", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cụm từ liên kết:</span> <b>as well as</b> có nghĩa là "cũng như là".</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> "...dành riêng cho Khổng Tử và 72 học trò ưu tú của ông, <b>cũng như</b> Chu Văn An - một người thầy nổi tiếng..."</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Phân biệt:</span> 'as long as' (miễn là), 'as far as' (theo như). Trong ngữ cảnh liệt kê này, chỉ có 'as well as' là đúng.</div>
+                `
+            },
+            {
+                id: 23,
+                section: "READING PASSAGE 2 (The Temple of Literature)",
+                question: "Choose the correct option for blank (23):",
+                options: [
+                    { key: "A", text: "university", val: "A" },
+                    { key: "B", text: "temple", val: "B" },
+                    { key: "C", text: "house", val: "C" },
+                    { key: "D", text: "academy", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Kiến thức lịch sử & ngữ cảnh:</span> Quốc Tử Giám được xem là trường đại học đầu tiên của Việt Nam.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Cụm từ kiến thức:</span> "the first <b>university</b> of Vietnam" (Trường đại học đầu tiên của Việt Nam).</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Phân tích:</span> temple (đền), house (ngôi nhà), academy (học viện). Đáp án chính xác nhất mô tả Quốc Tử Giám trong sách giáo khoa Tiếng Anh 7 là "university".</div>
+                `
+            },
+            {
+                id: 24,
+                section: "READING PASSAGE 2 (The Temple of Literature)",
+                question: "Choose the correct option for blank (24):",
+                options: [
+                    { key: "A", text: "collect", val: "A" },
+                    { key: "B", text: "colleting", val: "B" },
+                    { key: "C", text: "collection", val: "C" },
+                    { key: "D", text: "collective", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cấu trúc ngữ pháp Cụm Danh từ:</span> Sau tính từ 'small' ta cần một <b>DANH TỪ</b>. Cụm từ: <i>a small collection of...</i> (một bộ sưu tập nhỏ về...).</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích từ loại:</span></div>
+                    <ul class="exp-list">
+                        <li>A. collect (v): thu thập.</li>
+                        <li>B. collecting (v-ing): việc thu thập.</li>
+                        <li><b>C. collection (n):</b> bộ sưu tập -> DANH TỪ.</li>
+                        <li>D. collective (adj): tập thể.</li>
+                    </ul>
+                `
+            },
+            // SENTENCE BUILDING & REWRITING (25-28)
+            {
+                id: 25,
+                section: "SENTENCE BUILDING (Viết lại câu từ gợi ý)",
+                question: "Choose the correct sentence built from the cues: <b>I/ think/ Physics/ difficult/ as/ chemistry/.</b>",
+                options: [
+                    { key: "A", text: "I think Physics is as difficult as chemistry.", val: "A" },
+                    { key: "B", text: "I think Physics is the same difficult as chemistry.", val: "B" },
+                    { key: "C", text: "I think Physics is more difficult as chemistry", val: "C" },
+                    { key: "D", text: "I think Physics is difficulter as chemistry.", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cấu trúc So sánh bằng với tính từ:</span> <b>S1 + be + as + adj + as + S2</b>.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> "Tôi nghĩ môn Vật lý khó bằng môn Hóa học."</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Tại sao các câu khác SAI?</span></div>
+                    <ul class="exp-list">
+                        <li>B sai vì dùng 'the same' phải đi với danh từ (the same height/age as), không đi trực tiếp tính từ 'difficult'.</li>
+                        <li>C sai vì 'more difficult' phải đi với 'than', không đi với 'as'.</li>
+                        <li>D sai vì 'difficult' là tính từ dài, không thêm -er thành 'difficulter'.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 26,
+                section: "SENTENCE BUILDING (Viết lại câu từ gợi ý)",
+                question: "Choose the correct sentence built from the cues: <b>How many / egg / you / need / make / birthday cake //?</b>",
+                options: [
+                    { key: "A", text: "How much eggs do you need to make a birthday cake?", val: "A" },
+                    { key: "B", text: "How many eggs do you need to make a birthday cake?", val: "B" },
+                    { key: "C", text: "How much eggs does you need to make a birthday cake?", val: "C" },
+                    { key: "D", text: "How many eggs do you need to make an birthday cake?", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cấu trúc câu hỏi số lượng danh từ đếm được:</span> <b>How many + N(số nhiều) + do/does + S + need + to V...?</b></div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dịch nghĩa:</span> "Bạn cần bao nhiêu quả trứng để làm một chiếc bánh sinh nhật?"</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Phân tích lỗi sai các đáp án khác:</span></div>
+                    <ul class="exp-list">
+                        <li>A, C sai vì dùng 'How much' với danh từ đếm được 'eggs'.</li>
+                        <li>D sai vì dùng mạo từ 'an' trước 'birthday' (bắt đầu bằng phụ âm /b/ nên phải dùng 'a birthday cake').</li>
+                    </ul>
+                `
+            },
+            {
+                id: 27,
+                section: "SENTENCE TRANSFORMATION (Viết lại câu đồng nghĩa)",
+                question: "Choose the sentence closest in meaning: <b>The Japanese work hard, and they exercise regularly.</b>",
+                options: [
+                    { key: "A", text: "The Japanese work hard and exercise regularly.", val: "A" },
+                    { key: "B", text: "The Japanese don’t work hard, so they exercise regularly.", val: "B" },
+                    { key: "C", text: "The Japanese work hard, but they don’t exercise regularly.", val: "C" },
+                    { key: "D", text: "The Japanese don’t work hard and exercise regularly.", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Câu gốc:</span> "Người Nhật làm việc chăm chỉ, và họ tập thể dục thường xuyên."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Ngữ pháp rút gọn đồng chủ ngữ:</span> Hai mệnh đề có cùng chủ ngữ 'The Japanese' nối bằng liên từ 'and', ta có thể bỏ chủ ngữ thứ 2 -> "The Japanese work hard and exercise regularly."</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Lỗi sai của các câu khác:</span> B, C, D bị thêm từ phủ định "don't" hoặc liên từ "so", "but" làm biến đổi hoàn toàn nghĩa gốc của câu.</div>
+                `
+            },
+            {
+                id: 28,
+                section: "SENTENCE TRANSFORMATION (Viết lại câu đồng nghĩa)",
+                question: "Choose the sentence closest in meaning: <b>Jimmy’s hobby is horse riding.</b>",
+                options: [
+                    { key: "A", text: "Jimmy rides horses as a hobby.", val: "A" },
+                    { key: "B", text: "Horse riding is not Jimmy’s favourite thing.", val: "B" },
+                    { key: "C", text: "Jimmy does not enjoy riding horses.", val: "C" },
+                    { key: "D", text: "Jimmy doesn’t mind riding horses.", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa câu gốc:</span> "Sở thích của Jimmy là cưỡi ngựa."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích các đáp án:</span></div>
+                    <ul class="exp-list">
+                        <li><b>A. Jimmy rides horses as a hobby:</b> Jimmy cưỡi ngựa như một sở thích -> Đồng nghĩa tuyệt đối với câu gốc.</li>
+                        <li>B. Horse riding is not...: Cưỡi ngựa KHÔNG PHẢI điều yêu thích -> Sai nghĩa.</li>
+                        <li>C. Jimmy does not enjoy...: Jimmy KHÔNG THÍCH cưỡi ngựa -> Sai nghĩa.</li>
+                        <li>D. Jimmy doesn't mind...: Jimmy KHÔNG PHIỀN khi cưỡi ngựa -> Sai nghĩa.</li>
+                    </ul>
+                `
+            },
+            // SIGNS / NOTICES (29-30)
+            {
+                id: 29,
+                section: "SIGNS & NOTICES (Nhận biết biển báo)",
+                customVisual: `
+                    <div class="custom-sign-card">
+                        <div class="exit-notice-box">
+                            <i class="fa-solid fa-door-open"></i>
+                            EMERGENCY EXIT ONLY
+                        </div>
+                    </div>
+                `,
+                question: "What does the notice say?",
+                options: [
+                    { key: "A", text: "You can use this door anytime you want to enter.", val: "A" },
+                    { key: "B", text: "This door is only for use in emergencies when you need to leave quickly.", val: "B" },
+                    { key: "C", text: "Everyone should use this door to enter the building.", val: "C" },
+                    { key: "D", text: "This door is locked and cannot be opened at all.", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa thông báo:</span> "EMERGENCY EXIT ONLY" = CHỈ DÙNG CHO LỐI THOÁT HIỂM KHẨN CẤP.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích đáp án B:</span> "Cửa này chỉ được sử dụng trong các trường hợp khẩn cấp khi bạn cần rời đi nhanh chóng." -> Hoàn toàn chính xác!</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Loại trừ:</span> A & C nói dùng cửa để đi vào (enter) -> Sai vì Exit là lối ra; D nói cửa bị khóa hoàn toàn -> Sai.</div>
+                `
+            },
+            {
+                id: 30,
+                section: "SIGNS & NOTICES (Nhận biết biển báo)",
+                customVisual: `
+                    <div class="custom-sign-card">
+                        <div class="phone-sign-box">
+                            <div class="phone-icon-wrap">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <i class="fa-solid fa-ban"></i>
+                            </div>
+                            <div style="font-weight: 800; margin-top: 10px; color: #d63031;">PLEASE TURN OFF YOUR PHONE DURING THE MOVIE</div>
+                        </div>
+                    </div>
+                `,
+                question: "What does the sign say?",
+                options: [
+                    { key: "A", text: "Keep your phone on.", val: "A" },
+                    { key: "B", text: "Use your phone during the movie.", val: "B" },
+                    { key: "C", text: "Turn off your phone while the movie is playing.", val: "C" },
+                    { key: "D", text: "Leave your phone at home.", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch nghĩa biển báo:</span> "Làm ơn hãy tắt điện thoại của bạn trong suốt thời gian chiếu phim."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích đáp án C:</span> "Turn off your phone while the movie is playing" (Tắt điện thoại khi phim đang chiếu) -> Tương đương nghĩa 100%.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Loại trừ:</span> A (Bật điện thoại), B (Dùng điện thoại), D (Để điện thoại ở nhà) đều sai nội dung biển báo.</div>
+                `
+            },
+            // READING COMPREHENSION PASSAGE 3 (31-36)
+            {
+                id: 31,
+                section: "READING COMPREHENSION (Bài đọc hiểu 3)",
+                passage: "Some people think that learning is the most important activity of students. However, it is necessary for them to take part in other activities outdoors. They will help students realise their potential abilities. They never know how fast they are until they are in competition with their friends in a race. They won’t be aware of how helpful they are until their friends get into trouble. In addition, some outdoor games require cooperation. Students need to join hands to score points for their team. Furthermore, thanks to the trips they join, they can discover new things. They know more about different cultures and different ways of life. These things will help them broaden their horizons. No books or no subjects can teach them such soft skills, but these outdoor activities can.",
+                question: "The passage is mainly about ..............",
+                options: [
+                    { key: "A", text: "Learning activities", val: "A" },
+                    { key: "B", text: "Students’ competitions", val: "B" },
+                    { key: "C", text: "Why are outdoor activities important to children?", val: "C" },
+                    { key: "D", text: "Which is more important: learning or outdoor activities?", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dịch đại ý bài đọc:</span> Bài đọc nói về việc học sinh tham gia các hoạt động ngoài trời giúp các em nhận ra khả năng tiềm ẩn, học cách hợp tác, khám phá điều mới và mở rộng tầm nhìn, rèn luyện kỹ năng mềm mà sách vở không dạy được.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Ý chính (Main Idea):</span> Tác giả tập trung giải thích tầm quan trọng và lợi ích của các hoạt động ngoài trời đối với trẻ em -> Chọn <b>C</b>.</div>
+                `
+            },
+            {
+                id: 32,
+                section: "READING COMPREHENSION (Bài đọc hiểu 3)",
+                question: "When do students realize that they are helpful?",
+                options: [
+                    { key: "A", text: "when their friends are in trouble", val: "A" },
+                    { key: "B", text: "when they are in competition with their friend", val: "B" },
+                    { key: "C", text: "when they join trips", val: "C" },
+                    { key: "D", text: "when they discover new thing", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Tìm từ khóa trong bài (Keywords):</span> "realize", "helpful".</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Dẫn chứng trong bài đọc:</span> Dòng 4 ghi rõ: <i>"They won’t be aware of how helpful they are <b>until their friends get into trouble</b>."</i> (Họ sẽ không biết mình hay giúp đỡ người khác như thế nào cho đến khi bạn bè của họ gặp rắc rối).</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> 'get into trouble' tương đương 'are in trouble' -> Chọn <b>A</b>.</div>
+                `
+            },
+            {
+                id: 33,
+                section: "READING COMPREHENSION (Bài đọc hiểu 3)",
+                question: "How can students learn soft skills?",
+                options: [
+                    { key: "A", text: "through books", val: "A" },
+                    { key: "B", text: "through subjects", val: "B" },
+                    { key: "C", text: "through outdoor activities", val: "C" },
+                    { key: "D", text: "through games", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Dẫn chứng trong bài đọc:</span> Dòng cuối cùng của đoạn văn ghi: <i>"No books or no subjects can teach them such soft skills, <b>but these outdoor activities can</b>."</i> (Không sách vở hay môn học nào dạy họ kỹ năng mềm như vậy, nhưng các hoạt động ngoài trời này thì có thể).</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Kết luận:</span> Học sinh học kỹ năng mềm thông qua các hoạt động ngoài trời (through outdoor activities) -> Chọn <b>C</b>.</div>
+                `
+            },
+            {
+                id: 34,
+                section: "READING COMPREHENSION (Bài đọc hiểu 3)",
+                question: "According to the passage, which activity is NOT mentioned?",
+                options: [
+                    { key: "A", text: "discover new things", val: "A" },
+                    { key: "B", text: "require cooperation", val: "B" },
+                    { key: "C", text: "realize potential abilities", val: "C" },
+                    { key: "D", text: "have a holiday", val: "D" }
+                ],
+                correct: "D",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Đối chiếu thông tin trong đoạn văn:</span></div>
+                    <ul class="exp-list">
+                        <li>A. 'discover new things': Có đề cập ở câu 7 (discover new things).</li>
+                        <li>B. 'require cooperation': Có đề cập ở câu 5 (some outdoor games require cooperation).</li>
+                        <li>C. 'realize potential abilities': Có đề cập ở câu 3 (realise their potential abilities).</li>
+                        <li><b>D. 'have a holiday':</b> KHÔNG hề được nhắc tới trong bài đọc.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">2. Kết luận:</span> Chọn D.</div>
+                `
+            },
+            {
+                id: 35,
+                section: "READING COMPREHENSION (Bài đọc hiểu 3)",
+                question: "What is the OPPOSITE of 'helpful' as used in the passage?",
+                options: [
+                    { key: "A", text: "kind", val: "A" },
+                    { key: "B", text: "useless", val: "B" },
+                    { key: "C", text: "friendly", val: "C" },
+                    { key: "D", text: "caring", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Nghĩa của từ 'helpful':</span> (adj) có ích, hay giúp đỡ.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Yêu cầu tìm từ TRÁI NGHĨA (OPPOSITE):</span></div>
+                    <ul class="exp-list">
+                        <li>A. kind: tốt bụng.</li>
+                        <li><b>B. useless:</b> vô dụng, không có ích (Trái nghĩa trực tiếp với helpful).</li>
+                        <li>C. friendly: thân thiện.</li>
+                        <li>D. caring: biết quan tâm.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Chọn B.</div>
+                `
+            },
+            {
+                id: 36,
+                section: "READING COMPREHENSION (Bài đọc hiểu 3)",
+                question: "What is the CLOSEST meaning of 'be aware of' as used in the passage?",
+                options: [
+                    { key: "A", text: "work", val: "A" },
+                    { key: "B", text: "know", val: "B" },
+                    { key: "C", text: "learn", val: "C" },
+                    { key: "D", text: "teach", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Nghĩa của cụm từ 'be aware of':</span> nhận biết, biết về cái gì đó.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Yêu cầu tìm từ ĐỒNG NGHĨA (CLOSEST):</span></div>
+                    <ul class="exp-list">
+                        <li>A. work: làm việc.</li>
+                        <li><b>B. know:</b> biết, nhận thức được (Đồng nghĩa gần nhất với aware of).</li>
+                        <li>C. learn: học hỏi.</li>
+                        <li>D. teach: dạy dỗ.</li>
+                    </ul>
+                    <div class="exp-step"><span class="exp-step-title">3. Kết luận:</span> Chọn B.</div>
+                `
+            },
+            // CLOZE INSERTION (37-40)
+            {
+                id: 37,
+                section: "CLOZE TEXT INSERTION (Điền câu vào bài đọc)",
+                passage: "Music and arts play an important role in (37) ____. Schools encourage students to take part in art activities such as painting, dancing, or playing musical instruments because it helps them express their creativity and emotions. (38) ____ teaches students discipline and teamwork, as they often need to practice regularly and collaborate with others in performances or projects. Additionally, engaging in these activities can improve students’ self-confidence, (39) ____. Music and arts are not only fun but also serve as a great way for children to relax and reduce stress. With so many benefits, schools are promoting art programs (40) ____.",
+                question: "Choose the best phrase/sentence to fit blank (37):",
+                options: [
+                    { key: "A", text: "to ensure students have a well-rounded education", val: "A" },
+                    { key: "B", text: "students' education and personal development", val: "B" },
+                    { key: "C", text: "as they learn to showcase their talents in front of an audience", val: "C" },
+                    { key: "D", text: "Participating in music and arts also", val: "D" }
+                ],
+                correct: "B",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cấu trúc câu:</span> <b>play an important role in + N/V-ing</b> (Đóng vai trò quan trọng trong việc gì/cái gì).</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích:</span> Sau 'in' ta cần một danh từ/cụm danh từ. B là cụm danh từ "students' education and personal development" (sự giáo dục và phát triển cá nhân của học sinh).</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Dịch hoàn chỉnh:</span> "Âm nhạc và nghệ thuật đóng vai trò quan trọng trong sự giáo dục và phát triển cá nhân của học sinh."</div>
+                `
+            },
+            {
+                id: 38,
+                section: "CLOZE TEXT INSERTION (Điền câu vào bài đọc)",
+                question: "Choose the best phrase/sentence to fit blank (38):",
+                options: [
+                    { key: "A", text: "to ensure students have a well-rounded education", val: "A" },
+                    { key: "B", text: "students' education and personal development", val: "B" },
+                    { key: "C", text: "as they learn to showcase their talents in front of an audience", val: "C" },
+                    { key: "D", text: "Participating in music and arts also", val: "D" }
+                ],
+                correct: "D",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Ngữ pháp Chủ ngữ danh động từ (Gerund as Subject):</span> Đứng đầu câu trước động từ chính 'teaches' ta cần một <b>CHỦ NGỮ</b>.</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích đáp án D:</span> "Participating in music and arts also" (Việc tham gia vào âm nhạc và nghệ thuật cũng...) làm chủ ngữ số ít đi với động từ 'teaches'.</div>
+                    <div class="exp-step"><span class="exp-step-title">3. Dịch hoàn chỉnh:</span> "Việc tham gia vào âm nhạc và nghệ thuật cũng dạy cho học sinh tính kỷ luật và làm việc nhóm..."</div>
+                `
+            },
+            {
+                id: 39,
+                section: "CLOZE TEXT INSERTION (Điền câu vào bài đọc)",
+                question: "Choose the best phrase/sentence to fit blank (39):",
+                options: [
+                    { key: "A", text: "to ensure students have a well-rounded education", val: "A" },
+                    { key: "B", text: "students' education and personal development", val: "B" },
+                    { key: "C", text: "as they learn to showcase their talents in front of an audience", val: "C" },
+                    { key: "D", text: "Participating in music and arts also", val: "D" }
+                ],
+                correct: "C",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Ngữ cảnh bổ sung nguyên nhân:</span> Mệnh đề đằng trước: "...cải thiện sự tự tin của học sinh..."</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích đáp án C:</span> <i>"as they learn to showcase their talents in front of an audience"</i> (khi họ học được cách thể hiện tài năng của mình trước khán giả) - giải thích lý do tại sao sự tự tin lại tăng lên.</div>
+                `
+            },
+            {
+                id: 40,
+                section: "CLOZE TEXT INSERTION (Điền câu vào bài đọc)",
+                question: "Choose the best phrase/sentence to fit blank (40):",
+                options: [
+                    { key: "A", text: "to ensure students have a well-rounded education", val: "A" },
+                    { key: "B", text: "students' education and personal development", val: "B" },
+                    { key: "C", text: "as they learn to showcase their talents in front of an audience", val: "C" },
+                    { key: "D", text: "Participating in music and arts also", val: "D" }
+                ],
+                correct: "A",
+                explanation: `
+                    <div class="exp-header"><i class="fa-solid fa-lightbulb"></i> GIẢI THÍCH CHI TIẾT:</div>
+                    <div class="exp-step"><span class="exp-step-title">1. Cụm từ chỉ mục đích (Purpose):</span> <b>to + V-inf</b> (để làm gì).</div>
+                    <div class="exp-step"><span class="exp-step-title">2. Phân tích đáp án A:</span> "to ensure students have a well-rounded education" (để đảm bảo học sinh có một nền giáo dục toàn diện) giải thích mục đích nhà trường đẩy mạnh các chương trình nghệ thuật.</div>
+                `
+            }
+        ];
+
+        /* User Answer Tracking */
+        const userAnswers = {};
+
+        /* === SHUFFLE ARRAY ALGORITHM (For Options Randomization) === */
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        /* === RENDER QUESTIONS TO DOM === */
+        function renderQuiz() {
+            const wrapper = document.getElementById('questions-wrapper');
+            let currentSection = "";
+
+            questionsData.forEach((q, index) => {
+                // Section Header Divider
+                if (q.section !== currentSection) {
+                    currentSection = q.section;
+                    const secDiv = document.createElement('div');
+                    secDiv.className = 'section-header';
+                    secDiv.innerHTML = `<i class="fa-solid fa-bookmark"></i> ${currentSection}`;
+                    wrapper.appendChild(secDiv);
+                }
+
+                // Reading Passage if present
+                if (q.passage) {
+                    const passDiv = document.createElement('div');
+                    passDiv.className = 'reading-passage-box';
+                    passDiv.innerHTML = `<h4><i class="fa-solid fa-book-open"></i> ĐOẠN VĂN / ĐỀ BÀI:</h4>${q.passage}`;
+                    wrapper.appendChild(passDiv);
+                }
+
+                // Question Card
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.id = `q-card-${q.id}`;
+
+                // Custom Visual Sign for Q29/30 if exists
+                let customVisualHTML = q.customVisual ? q.customVisual : '';
+
+                // Randomize options order
+                const shuffledOpts = shuffleArray(q.options);
+
+                card.innerHTML = `
+                    <div class="question-title">
+                        <span style="color: #8854C0;">Câu ${q.id}:</span> ${q.question}
+                    </div>
+                    ${customVisualHTML}
+                    <div class="options-grid ${shuffledOpts.length <= 4 ? 'two-cols' : ''}" id="opts-grid-${q.id}">
+                        ${shuffledOpts.map(opt => `
+                            <button class="option-btn" id="btn-q${q.id}-${opt.val}" onclick="selectAnswer(${q.id}, '${opt.val}', '${q.correct}')">
+                                <span><b>${opt.key}.</b> ${opt.text}</span>
+                                <span class="option-icon" id="icon-q${q.id}-${opt.val}"></span>
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div class="explanation-box" id="exp-${q.id}">
+                        ${q.explanation}
+                    </div>
+                `;
+
+                wrapper.appendChild(card);
+            });
+        }
+
+        /* === HANDLE USER ANSWER SELECTION === */
+        function selectAnswer(qId, selectedVal, correctVal) {
+            // Prevent re-selection
+            if (userAnswers[qId] !== undefined) return;
+
+            userAnswers[qId] = selectedVal;
+
+            const grid = document.getElementById(`opts-grid-${qId}`);
+            const buttons = grid.querySelectorAll('.option-btn');
+
+            buttons.forEach(btn => btn.classList.add('disabled'));
+
+            const selectedBtn = document.getElementById(`btn-q${qId}-${selectedVal}`);
+            const selectedIcon = document.getElementById(`icon-q${qId}-${selectedVal}`);
+            const expBox = document.getElementById(`exp-${qId}`);
+
+            if (selectedVal === correctVal) {
+                // Correct Choice
+                selectedBtn.classList.add('correct');
+                selectedIcon.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+                playDingSound();
+                triggerConfetti();
+            } else {
+                // Wrong Choice
+                selectedBtn.classList.add('incorrect');
+                selectedIcon.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>`;
+                playWrongSound();
+
+                // Highlight correct button as well
+                const correctBtn = document.getElementById(`btn-q${qId}-${correctVal}`);
+                if (correctBtn) {
+                    correctBtn.classList.add('correct');
+                    const correctIcon = document.getElementById(`icon-q${qId}-${correctVal}`);
+                    if (correctIcon) correctIcon.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+                }
+            }
+
+            // Expand detailed explanation box immediately
+            expBox.style.display = 'block';
+
+            // Update Progress Bar
+            updateProgress();
+        }
+
+        /* === UPDATE PROGRESS BAR === */
+        function updateProgress() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const total = questionsData.length;
+            const percent = (answeredCount / total) * 100;
+
+            document.getElementById('progress-fill').style.width = `${percent}%`;
+            document.getElementById('progress-text').innerText = `${answeredCount} / ${total} câu`;
+        }
+
+        /* === EVALUATE FINAL SCORE & SHOW POPUP === */
+        function evaluateFinalScore() {
+            let correctCount = 0;
+            const total = questionsData.length;
+
+            questionsData.forEach(q => {
+                if (userAnswers[q.id] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const scorePercent = Math.round((correctCount / total) * 100);
+
+            document.getElementById('modal-score').innerText = `${correctCount} / ${total}`;
+            document.getElementById('modal-percentage').innerText = `Đạt: ${scorePercent}% số điểm`;
+
+            const feedbackElem = document.getElementById('modal-feedback-text');
+
+            if (scorePercent < 50) {
+                feedbackElem.innerHTML = `
+                    <div style="color: #e74c3c; font-weight: 800; font-size: 1.1rem; margin-bottom: 5px;">
+                        <i class="fa-solid fa-heart-crack"></i> Lời nhắn từ Ms Lê Hằng:
+                    </div>
+                    "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!"
+                `;
+            } else if (scorePercent >= 60 && scorePercent <= 80) {
+                feedbackElem.innerHTML = `
+                    <div style="color: #e67e22; font-weight: 800; font-size: 1.1rem; margin-bottom: 5px;">
+                        <i class="fa-solid fa-star-half-stroke"></i> Lời nhắn từ Ms Lê Hằng:
+                    </div>
+                    "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!"
+                `;
+            } else {
+                feedbackElem.innerHTML = `
+                    <div style="color: #2ecc71; font-weight: 800; font-size: 1.1rem; margin-bottom: 5px;">
+                        <i class="fa-solid fa-trophy"></i> Lời nhắn từ Ms Lê Hằng:
+                    </div>
+                    "Làm tốt lắm, con cố gắng rinh điểm 10 ở lần sau nha!"
+                `;
+                triggerConfetti();
+            }
+
+            document.getElementById('result-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = 'none';
+        }
+
+        // Initialize quiz on load
+        window.addEventListener('DOMContentLoaded', renderQuiz);
+    </script>
+</body>
+</html>
+```eof
+
+Your interactive Grade 7 English Exam HTML application with full gamification styling, audio effects, randomizing options, instant step-by-step explanations, and customizable feedback from Ms Lê Hằng English has been generated! Feel free to review it or ask for any adjustments.
